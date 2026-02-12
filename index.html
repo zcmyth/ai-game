@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="topbar">
+        <div class="title">Snake</div>
+        <div class="score" id="score">Score: 0</div>
+      </header>
+      <main class="stage">
+        <div id="game"></div>
+      </main>
+      <section class="controls" aria-label="Controls">
+        <div class="keys">
+          <div class="key">Move: Arrow Keys / WASD</div>
+          <div class="key">Restart: R</div>
+          <div class="key">Pause: Space</div>
+        </div>
+        <div class="touch">
+          <button class="btn" data-dir="up" aria-label="Move Up">▲</button>
+          <div class="row">
+            <button class="btn" data-dir="left" aria-label="Move Left">◀</button>
+            <button class="btn" data-dir="down" aria-label="Move Down">▼</button>
+            <button class="btn" data-dir="right" aria-label="Move Right">▶</button>
+          </div>
+          <button class="btn secondary" id="restart" aria-label="Restart">Restart</button>
+        </div>
+      </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+    <script src="./src/snakeLogic.js"></script>
+    <script src="./src/game.js"></script>
+  </body>
+</html>
